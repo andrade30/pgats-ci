@@ -15,9 +15,7 @@ test.describe(`user rides`, async () => {
   });
 
   test('user above height should not be allowed', async ({ page }) => {
-    await page
-      .getByRole('link', { name: 'Choose Robo Coaster Of Doom' })
-      .click();
+    await page.getByRole('link', { name: 'Choose Robo Coaster Of Doom' }).click();
     await page.getByLabel('Amount of people').selectOption('1');
     await page.getByLabel('Height for person').click();
     await page.getByLabel('Height for person').fill('139');
@@ -28,9 +26,7 @@ test.describe(`user rides`, async () => {
   });
 
   test('user with minimum height should be allowed', async ({ page }) => {
-    await page
-      .getByRole('link', { name: 'Choose Robo Coaster Of Doom' })
-      .click();
+    await page.getByRole('link', { name: 'Choose Robo Coaster Of Doom' }).click();
     await page.getByLabel('Amount of people').selectOption('1');
     await page.getByLabel('Height for person').click();
     await page.getByLabel('Height for person').fill('141');
